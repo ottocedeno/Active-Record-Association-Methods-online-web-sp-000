@@ -13,5 +13,9 @@ class Song < ActiveRecord::Base
     drake = Artist.find_by(name: "Drake")
     drake ||= Artist.create(name: "Drake")
     self.artist = drake
+
+    #FI Answer:
+    # drake = Artist.find_or_create_by(name: 'Drake')
+    # self.artist = drake
   end
 end
